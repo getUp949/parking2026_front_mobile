@@ -17,6 +17,7 @@ import VisitorReservationForm from '../views/visitor/VisitorReservationForm.vue'
 import VisitorNotice from '../views/visitor/VisitorNotice.vue'
 import VisitorProfile from '../views/visitor/VisitorProfile.vue'
 import VisitorRegister from '../views/visitor/VisitorRegister.vue'
+import AreaPrediction from '../views/visitor/AreaPrediction.vue'
 
 Vue.use(VueRouter)
 
@@ -104,6 +105,12 @@ const routes = [
     meta: { requiresAuth: true, role: 'owner' }
   },
   {
+    path: '/mobile/prediction',
+    name: 'MobileOwnerPrediction',
+    component: AreaPrediction,
+    meta: { requiresAuth: true, role: 'owner' }
+  },
+  {
     path: '/mobile/notices',
     name: 'MobileMyNotice',
     component: MyNotice,
@@ -144,6 +151,12 @@ const routes = [
     path: '/mobile/visitor/profile',
     name: 'MobileVisitorProfile',
     component: VisitorProfile,
+    meta: { requiresAuth: true, role: 'visitor' }
+  },
+  {
+    path: '/mobile/visitor/prediction',
+    name: 'MobileAreaPrediction',
+    component: AreaPrediction,
     meta: { requiresAuth: true, role: 'visitor' }
   },
   {

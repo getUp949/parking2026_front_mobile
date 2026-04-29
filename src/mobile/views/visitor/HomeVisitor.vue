@@ -25,11 +25,11 @@
         <p class="label">我的通知</p>
       </div>
 
-      <div class="menu-item" @click="$router.push('/mobile/visitor/profile')">
-        <div class="icon" style="background: #909399;">
-          <span>👤</span>
+      <div class="menu-item" @click="$router.push('/mobile/visitor/prediction')">
+        <div class="icon" style="background: #ff9800;">
+          <span>📊</span>
         </div>
-        <p class="label">个人信息</p>
+        <p class="label">车位预测</p>
       </div>
 
       <div class="menu-item" @click="handleQuickReservation">
@@ -43,14 +43,14 @@
     <div class="info-section">
       <h3>使用说明</h3>
       <div class="info-card">
-        <div class="info-icon">💡</div>
+        <div class="info-icon"></div>
         <div class="info-text">
           <p class="info-title">如何预约停车位？</p>
           <p class="info-desc">点击"我的预约"或"快速预约"，填写您的访客信息和预计到访时间，即可完成预约。</p>
         </div>
       </div>
       <div class="info-card">
-        <div class="info-icon">📱</div>
+        <div class="info-icon"></div>
         <div class="info-text">
           <p class="info-title">预约审批</p>
           <p class="info-desc">您的预约申请将发送给业主审批，审批通过后您将收到通知提醒。</p>

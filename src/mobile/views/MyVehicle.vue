@@ -40,11 +40,6 @@
           </div>
           <div class="card-footer">
             <button
-              v-if="item.status === 1 && item.isDefault !== 1"
-              @click="handleSetDefault(item)"
-              class="btn-text"
-            >设为默认</button>
-            <button
               v-if="item.status === 1"
               @click="$router.push(`/mobile/vehicle/edit/${item.id}`)"
               class="btn-text"
@@ -58,7 +53,7 @@
 </template>
 
 <script>
-import { getMyVehicles, setDefaultVehicle, deleteVehicle } from '@/utils/api'
+import { getMyVehicles, deleteVehicle } from '@/utils/api'
 
 export default {
   name: 'MobileMyVehicle',
@@ -102,17 +97,6 @@ export default {
         mpv: 'MPV'
       }
       return map[type] || type || '-'
-    },
-
-    handleSetDefault(vehicle) {
-      if (!confirm(`确定将 "${vehicle.licensePlate}" 设为默认车辆？`)) return
-      setDefaultVehicle(vehicle.id)
-        .then(res => {
-          if (res.code === 200) {
-            alert('设置成功')
-            this.fetchData()
-          }
-        })
     },
 
     handleDelete(vehicle) {

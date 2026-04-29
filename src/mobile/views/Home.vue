@@ -30,6 +30,16 @@
       <span class="invite-arrow">›</span>
     </div>
 
+    <!-- 车位预测卡片 -->
+    <div class="invite-card" @click="$router.push('/mobile/prediction')">
+      <div class="invite-icon" style="background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%);">📊</div>
+      <div class="invite-info">
+        <p class="invite-title">车位预测</p>
+        <p class="invite-hint">查看各区域空位预测情况</p>
+      </div>
+      <span class="invite-arrow">›</span>
+    </div>
+
     <div class="menu-grid">
       <div class="menu-item" @click="$router.push('/mobile/vehicles')">
         <div class="icon" style="background: #409eff;">
