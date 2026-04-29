@@ -156,3 +156,20 @@ export function ownerRegister(data) {
 export function getVisitorReservationDetail(id) {
   return request.get(`/visitor/reservation/${id}`)
 }
+
+// ==================== 车位预测相关 API ====================
+
+// 预测所有区域空位
+export function getAllAreasPrediction(params) {
+  return request.get('/prediction/all-areas', { params })
+}
+
+// 预测指定区域空位
+export function getAreaPrediction(areaId, params) {
+  return request.get(`/prediction/area/${areaId}/vacancy`, { params })
+}
+
+// 获取即将离开的预约列表
+export function getLeavingReservations(areaId, params) {
+  return request.get(`/prediction/area/${areaId}/leaving`, { params })
+}
